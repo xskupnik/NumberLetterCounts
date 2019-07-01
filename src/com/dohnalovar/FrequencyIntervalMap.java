@@ -51,7 +51,7 @@ public class FrequencyIntervalMap {
 
     private static TriFunction<Integer, Integer, Integer, Integer> f0Hundred = (index, x, y) -> {
         if ( x >= (index+1) * 100 ) return 0;
-        if ( y <= index * 100 ) return 0;
+        if ( y < index * 100 ) return 0;
         if ( x < index*100 ) x = index*100;
         if ( y > (index+1)*100-1) y = (index+1)*100-1;
 
